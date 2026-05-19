@@ -127,8 +127,6 @@
     <script src="./leaflet/draw/src/edit/handler/EditToolbar.Edit.js"></script>
     <script src="./leaflet/draw/src/edit/handler/EditToolbar.Delete.js"></script>
 
-    
-
     <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
 </head>
 <body>
@@ -136,7 +134,7 @@
     <script>
 
         // Script variables
-        const apiKey = "pk.eyJ1IjoiYm5vcmRncmVuIiwiYSI6ImNsZmxuMHowZzAzaTczeG80ZXR3a2ZnNHEifQ.kc7P57DJg8tyDMjjP7czuQ";
+        const apiKey = process.env.mapToken;
 
         const streetBaseLayer = L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${apiKey}`, {
             tileSize: 512,
